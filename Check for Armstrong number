@@ -1,0 +1,38 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int number=scan.nextInt();
+        int numbercp=number;
+        int numbercp1=number;
+        int nod=0;
+        int rem=0;
+        while(number!=0){
+             rem=number%10;
+             number=number/10;
+             nod=nod+1;
+        }
+        rem=0;
+        int amstrong=0;
+        while(numbercp!=0){
+            rem=numbercp%10;
+            amstrong=amstrong+fun(rem,nod);
+            numbercp=numbercp/10;
+        }
+        if(numbercp1==amstrong){
+            System.out.println("it is amstrong number");
+        }else{
+             System.out.println("it is  not a amstrong number");
+        }
+        
+    }
+     public static int fun(int rem,int nod){
+            int p=1;
+        while(nod>0){
+            p=p*rem;
+            nod--;
+        }
+        return p;}
+    
+}
