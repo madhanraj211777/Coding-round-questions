@@ -1,0 +1,21 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int number=scan.nextInt();
+        int numbercp=number;
+        System.out.println("The reverse a number is "+ revs(number));
+        
+    }
+     public static int revs (int number){
+            int rem=0;
+            int rev=0;
+            while(number!=0){
+                rem=number%10;
+                rev=rev*10+rem;
+                number=number/10;
+            }
+            return rev;
+     }
+}
